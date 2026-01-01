@@ -1,0 +1,25 @@
+{
+  "name": "the-riddler-web",
+  "version": "0.1.0",
+  "type": "module",
+  "scripts": {
+    "build:css": "tailwindcss -i src/main.css -o src/tail-out.css",
+    "build:js": "esbuild src/main.tsx --bundle --format=esm --outfile=../assets/the-riddler.js",
+    "build": "npm run build:css && npm run build:js"
+  },
+  "dependencies": {
+    "@openai/apps-sdk-ui": "^0.2.1",
+    "@tailwindcss/postcss": "^4.0.17",
+    "lucide-react": "^0.554.0",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "tailwindcss": "^4.0.17"
+  },
+  "devDependencies": {
+    "@tailwindcss/cli": "^4.0.17",
+    "@types/react": "^18.2.24",
+    "@types/react-dom": "^18.2.11",
+    "esbuild": "^0.21.5",
+    "typescript": "^5.6.3"
+  }
+}

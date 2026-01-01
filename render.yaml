@@ -1,0 +1,16 @@
+services:
+  - type: web
+    name: bmi-health-calculator
+    env: node
+    plan: free
+    region: oregon
+    buildCommand: npm install
+    startCommand: npm start
+    autoDeploy: true
+    healthCheckPath: /health
+    envVars:
+      - key: NODE_VERSION
+        value: 20
+      # Optional: set a password to gate the analytics dashboard
+      - key: ANALYTICS_PASSWORD
+        sync: false

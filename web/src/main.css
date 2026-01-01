@@ -1,0 +1,36 @@
+@import "tailwindcss";
+@import "@openai/apps-sdk-ui/css";
+@source "../node_modules/@openai/apps-sdk-ui";
+
+@theme {
+    --color-primary: #8B5CF6;
+    --color-primary-dark: #7C3AED;
+    --color-accent-light: #F5F3FF;
+    --color-success: #10B981;
+}
+
+body {
+    background: linear-gradient(180deg, #F5F3FF 0%, #F3F4F6 100%);
+    min-height: 100vh;
+}
+
+#investment-calculator-root {
+    display: flex;
+    flex-direction: column;
+    items-center: center;
+    justify-content: flex-start;
+    width: 100%;
+    padding: 1rem;
+    position: relative;
+}
+
+#investment-calculator-root::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 4px;
+    background: linear-gradient(90deg, #8B5CF6, #D8B4FE, #8B5CF6);
+    z-index: 50;
+}
